@@ -8,9 +8,13 @@ const delay = (duration) => {
 }
 
 const displayConsole = async () => {
-    console.log('Runs with a delay...1')
-    await delay(2000);
-    console.log('Runs with a delay...2')
+    console.log('Runs without a delay...');
+    try {
+        await delay(2000);
+        console.log('Runs with a delay...');
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 displayConsole();
