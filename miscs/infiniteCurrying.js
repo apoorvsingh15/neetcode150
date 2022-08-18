@@ -1,4 +1,4 @@
-// sum(1)(1,2,3,4)(56,32)() - Implement this - Infinite currying problem.
+// sum(1)(1,2,3,4)(56,32)() - Implement this - Infinite currying problem. - Interview question
 
 // Solution 1 - Infinite currying with single parameters.
 
@@ -13,6 +13,7 @@ let sum = (a) => {
 // This is usually used for functions that are invoked immediately
 console.log(+sum(1)(2)(6)());
 
+// Advance Variation with infinite arguments.
 function sumInfinite(...args) {
     return Object.assign(
         sumInfinite.bind(null, ...args),
